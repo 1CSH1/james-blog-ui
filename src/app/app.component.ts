@@ -8,9 +8,8 @@ import { TranslateService } from "@ngx-translate/core";
 })
 export class AppComponent {
   title = 'app';
-
+  model = 1;
   constructor(public translateService: TranslateService) {
-
   }
 
   ngOnInit() {
@@ -21,4 +20,5 @@ export class AppComponent {
     this.translateService.use(browserLang.match(/zh|en/) ? browserLang : 'zh');
     // --- set i18n end ---
   }
+
 }
