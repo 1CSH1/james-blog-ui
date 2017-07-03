@@ -1,2 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+/* bootstrap */
 @import "assets/bootstrap/bootstrap.min.css";
+
+/* clean-blog */
+@import "assets/clean-blog/vendor/font-awesome/css/font-awesome.min.css";
+@import "https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic";
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800";
+@import "assets/clean-blog/css/clean-blog.min.css";
+
+.navbar-toggler {
+  z-index: 1;
+}
+
+@media (max-width: 576px) {
+  nav > .container {
+    width: 100%;
+  }
+}
+

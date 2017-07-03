@@ -1,41 +1,139 @@
 <!--The whole content below can be removed with the new code.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=" />
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<div>
-  <span> test the i18n module: ngx-translate</span>
-  <h1>{{ 'hello' | translate }}</h1>
-</div>
-
-<div>
-  <span> test the ng-bootstrap</span>
-  <div [(ngModel)]="model" ngbRadioGroup name="radioBasic">
-    <label class="btn btn-primary">
-      <input type="radio" [value]="1"> Left (pre-checked)
-    </label>
-    <label class="btn btn-primary">
-      <input type="radio" value="middle"> Middle
-    </label>
-    <label class="btn btn-primary">
-      <input type="radio" [value]="false"> Right
-    </label>
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-md navbar-light" id="mainNav">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation">
+      Menu <i class="fa fa-bars"></i>
+    </button>
+    <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../assets/clean-blog/about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../assets/clean-blog/post.html">Sample Post</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../assets/clean-blog/contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
   </div>
-  <hr>
-  <pre>{{model}}</pre>
+</nav>
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('../assets/clean-blog/img/home-bg.jpg')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+        <div class="site-heading">
+          <h1>Clean Blog</h1>
+          <span class="subheading">A Blog Theme by Start Bootstrap</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+      <div class="post-preview">
+        <a href="../assets/clean-blog/post.html">
+          <h2 class="post-title">
+            Man must explore, and this is exploration at its greatest
+          </h2>
+          <h3 class="post-subtitle">
+            Problems look mighty small from 150 miles up
+          </h3>
+        </a>
+        <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2017</p>
+      </div>
+      <hr>
+      <div class="post-preview">
+        <a href="../assets/clean-blog/post.html">
+          <h2 class="post-title">
+            I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
+          </h2>
+        </a>
+        <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2017</p>
+      </div>
+      <hr>
+      <div class="post-preview">
+        <a href="../assets/clean-blog/post.html">
+          <h2 class="post-title">
+            Science has not yet mastered prophecy
+          </h2>
+          <h3 class="post-subtitle">
+            We predict too much for the next year and yet far too little for the next ten.
+          </h3>
+        </a>
+        <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2017</p>
+      </div>
+      <hr>
+      <div class="post-preview">
+        <a href="../assets/clean-blog/post.html">
+          <h2 class="post-title">
+            Failure is not an option
+          </h2>
+          <h3 class="post-subtitle">
+            Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+          </h3>
+        </a>
+        <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2017</p>
+      </div>
+      <hr>
+      <!-- Pager -->
+      <div class="clearfix">
+        <a class="btn btn-secondary float-right" href="#">Older Posts &rarr;</a>
+      </div>
+    </div>
+  </div>
 </div>
+
+<hr>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+        <ul class="list-inline text-center">
+          <li class="list-inline-item">
+            <a href="#">
+              <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">
+              <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">
+              <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Your Website 2017</p>
+      </div>
+    </div>
+  </div>
+</footer>
