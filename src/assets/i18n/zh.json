@@ -1,3 +1,6 @@
 {
-  "hello": "你好"
+  "app": {
+    "siteHeading": "James Blog",
+    "subHeading": "Just Do"
+  }
 }

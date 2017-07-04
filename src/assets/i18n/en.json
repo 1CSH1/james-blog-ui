@@ -1,3 +1,6 @@
 {
-  "hello": "the word is hello"
+  "app": {
+    "siteHeading": "James Blog",
+    "subHeading": "Just Do"
+  }
 }
