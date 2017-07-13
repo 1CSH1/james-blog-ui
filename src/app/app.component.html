@@ -1,6 +1,7 @@
 <!--The whole content below can be removed with the new code.-->
 
 <!-- Navigation -->
+
 <nav class="navbar fixed-top navbar-toggleable-md navbar-light" id="mainNav">
   <div class="container">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -8,109 +9,30 @@
             aria-label="Toggle navigation">
       Menu <i class="fa fa-bars"></i>
     </button>
-    <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+    <a class="navbar-brand" href="/">{{ 'app.homeBlog' | translate }}</a>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="">{{ 'app.homePage' | translate }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../assets/clean-blog/about.html">About</a>
+          <a class="nav-link" routerLink="categories">{{ 'app.categories' | translate }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../assets/clean-blog/post.html">Sample Post</a>
+          <a class="nav-link" routerLink="tags">{{ 'app.tags' | translate }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../assets/clean-blog/contact.html">Contact</a>
+          <a class="nav-link" routerLink="about">{{ 'app.about' | translate }}</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Page Header -->
-<header class="masthead" style="background-image: url('../assets/clean-blog/img/home-bg.jpg')">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-        <div class="site-heading">
-          <h1>{{ 'app.siteHeading'|translate }}</h1>
-          <span class="subheading">{{ 'app.subHeading'|translate }}</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
 
-<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-      <div class="post-preview">
-        <a href="../assets/clean-blog/post.html">
-          <h2 class="post-title">
-            Man must explore, and this is exploration at its greatest
-          </h2>
-          <h3 class="post-subtitle">
-            Problems look mighty small from 150 miles up
-          </h3>
-        </a>
-        <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2017</p>
-      </div>
-      <hr>
-      <div class="post-preview">
-        <a href="../assets/clean-blog/post.html">
-          <h2 class="post-title">
-            在 Ubuntu 中开发 Angular 项目
-          </h2>
-          <h3 class="post-subtitle">
-            使用 WebStorm 开发工具
-          </h3>
-        </a>
-        <p class="post-meta">Posted by <a href="#">陈烁隍</a> on 2017-07-04</p>
-      </div>
-      <hr>
-      <div class="post-preview">
-        <a href="../assets/clean-blog/post.html">
-          <h2 class="post-title">
-            I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-          </h2>
-        </a>
-        <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2017</p>
-      </div>
-      <hr>
-      <div class="post-preview">
-        <a href="../assets/clean-blog/post.html">
-          <h2 class="post-title">
-            Science has not yet mastered prophecy
-          </h2>
-          <h3 class="post-subtitle">
-            We predict too much for the next year and yet far too little for the next ten.
-          </h3>
-        </a>
-        <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2017</p>
-      </div>
-      <hr>
-      <div class="post-preview">
-        <a href="../assets/clean-blog/post.html">
-          <h2 class="post-title">
-            Failure is not an option
-          </h2>
-          <h3 class="post-subtitle">
-            Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-          </h3>
-        </a>
-        <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2017</p>
-      </div>
-      <hr>
-      <!-- Pager -->
-      <div class="clearfix">
-        <a class="btn btn-secondary float-right" href="#">Older Posts &rarr;</a>
-      </div>
-    </div>
-  </div>
+<div>
+  <router-outlet></router-outlet>
 </div>
-
 <hr>
 
 <!-- Footer -->

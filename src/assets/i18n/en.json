@@ -1,6 +1,16 @@
 {
   "app": {
     "siteHeading": "James Blog",
-    "subHeading": "Just Do"
+    "subHeading": "Just Do",
+    "homeBlog": "James Blog",
+    "homePage": "Home",
+    "categories": "Categories",
+    "tags": "Tags",
+    "about": "About"
+  },
+
+  "home": {
+    "newer": "Newer Posts",
+    "older": "Older Posts"
   }
 }

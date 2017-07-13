@@ -5,8 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import {RouterModule} from "@angular/router";
 
 import { AppComponent } from './app.component';
+import {appRoutes} from "./app.routes";
+import {HomeModule} from "./home/home.module";
 
 
 export function createTranslateHttpLoader(http: Http) {
@@ -21,6 +24,8 @@ export function createTranslateHttpLoader(http: Http) {
     BrowserModule,
     HttpModule,
     FormsModule,
+    RouterModule,
+    HomeModule,
     /**
      * ngx-translate
      */
@@ -34,7 +39,11 @@ export function createTranslateHttpLoader(http: Http) {
     /**
      * ng-bootstrap
      */
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    RouterModule.forRoot(appRoutes)
+  ],
+  exports: [
+    TranslateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
