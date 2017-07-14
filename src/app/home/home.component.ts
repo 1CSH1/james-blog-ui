@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   // 首页文章
   public articles: Article[];
   // 分页对象
-  public page: Page;
+  public page: Page = new Page();
 
   constructor(
     private homeService: HomeService,
@@ -24,12 +24,27 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.page = new Page();
-    this.page.pageNo = 0;
-    this.page.pageSize = 0;
-    this.page.isFirst = false;
-    this.page.isLast = false;
+    this.activateRoute.params.subscribe(params => {
+      console.log(params);
+      this.page.pageNo = params['page'];
+      this.getArticles()
+    })
 
+  }
+
+  changePage(num: number) {
+    if (0 == num) {
+      // 上一页
+      this.page.pageNo = this.page.pageNo - 1;
+    } else {
+      // 下一页
+      this.page.pageNo = this.page.pageNo + 1;
+    }
+    // this.getArticles();
+    this.router.navigateByUrl("page/" + this.page.pageNo);
+  }
+
+  getArticles() {
     this.homeService.getArticles(this.page.pageSize, this.page.pageNo).subscribe(
       res => {
         this.articles = res['data'];
@@ -49,6 +64,4 @@ export class HomeComponent implements OnInit {
       }
     );
   }
-
-
 }

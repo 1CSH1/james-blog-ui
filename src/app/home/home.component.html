@@ -31,8 +31,8 @@
 
       <!-- Pager -->
       <div class="clearfix">
-        <a *ngIf="!page.isFirst" class="btn btn-secondary float-left" href="#">&larr; {{ 'home.newer' | translate }}</a>
-        <a *ngIf="!page.isLast" class="btn btn-secondary float-right" href="#">{{ 'home.older' | translate }} &rarr;</a>
+        <button (click)="changePage(0)" *ngIf="!page.isFirst" class="btn btn-secondary float-left">&larr; {{ 'home.newer' | translate }}</button>
+        <button (click)="changePage(1)" *ngIf="!page.isLast" class="btn btn-secondary float-right">{{ 'home.older' | translate }} &rarr;</button>
       </div>
     </div>
   </div>

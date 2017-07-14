@@ -3,11 +3,11 @@
  */
 export class Page {
   // 第几页
-  pageNo: number;
+  pageNo: number = 1;
   // 每页文章数
-  pageSize: number;
+  pageSize: number = 5;
   // 是不是首页
-  isFirst: boolean;
+  isFirst: boolean = false;
   // 是不是末页
-  isLast: boolean;
+  isLast: boolean = false;
 }

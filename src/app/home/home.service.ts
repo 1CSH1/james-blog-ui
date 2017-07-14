@@ -11,7 +11,9 @@ import {Article} from "../model/Article";
 @Injectable()
 export class HomeService {
 
-  private homeUrl: string = "assets/article.json";
+  private homeUrl1: string = "assets/data/article1.json";
+  private homeUrl2: string = "assets/data/article2.json";
+  private homeUrl3: string = "assets/data/article3.json";
 
   constructor(public http: Http) {
 
@@ -23,8 +25,16 @@ export class HomeService {
     params.set("pageNo", pageNo.toString());
     params.set("pageSize", pageSize.toString());
 
+    let homeUrl = "";
+    if (pageNo == 1) {
+      homeUrl = this.homeUrl1;
+    } else if (pageNo == 2) {
+      homeUrl = this.homeUrl2;
+    } else {
+      homeUrl = this.homeUrl3
+    }
     return this.http
-      .get(this.homeUrl, {search: params})
+      .get(homeUrl, {search: params})
       .map(response => {
         let result = response.json();
         console.log(result);
