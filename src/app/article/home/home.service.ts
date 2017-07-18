@@ -3,7 +3,7 @@ import {Http} from "@angular/http";
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/catch";
 import {Observable} from "rxjs/Observable";
-import {Article} from "../model/Article";
+import {Article} from "../../model/Article";
 
 /**
  * Created by jamescsh on 7/10/17.
@@ -11,9 +11,9 @@ import {Article} from "../model/Article";
 @Injectable()
 export class HomeService {
 
-  private homeUrl1: string = "assets/data/article1.json";
-  private homeUrl2: string = "assets/data/article2.json";
-  private homeUrl3: string = "assets/data/article3.json";
+  private homeUrl1: string = "assets/data/articles1.json";
+  private homeUrl2: string = "assets/data/articles2.json";
+  private homeUrl3: string = "assets/data/articles3.json";
 
   constructor(public http: Http) {
 

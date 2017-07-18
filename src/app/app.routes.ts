@@ -4,15 +4,11 @@ import {AppComponent} from "./app.component";
 export const appRoutes: Routes = [
   {
     path: "",
-    redirectTo: "home",
-    pathMatch: "full"
-  },
-  {
-    path: "home",
-    loadChildren: "./home/home.module#HomeModule"
+    loadChildren: "./article/article.module#ArticleModule"
   },
   {
     path: "**",
-    component: AppComponent
+    redirectTo: "",
+    pathMatch: "full"
   }
 ]

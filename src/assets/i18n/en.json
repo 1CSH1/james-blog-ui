@@ -1,16 +1,21 @@
 {
   "app": {
-    "siteHeading": "James Blog",
-    "subHeading": "Just Do",
     "homeBlog": "James Blog",
     "homePage": "Home",
     "categories": "Categories",
     "tags": "Tags",
-    "about": "About"
+    "about": "About",
+    "menu": "Menu"
   },
 
   "home": {
+    "siteHeading": "James Blog",
+    "subHeading": "Just Do",
     "newer": "Newer Posts",
-    "older": "Older Posts"
+    "older": "Older Posts",
+    "postedOn": "Posted on",
+    "readTimes": "read times",
+    "commentTimes": "comment times",
+    "isTop": "Top"
   }
 }

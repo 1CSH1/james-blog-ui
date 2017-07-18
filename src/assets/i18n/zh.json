@@ -1,16 +1,21 @@
 {
   "app": {
-    "siteHeading": "James Blog",
-    "subHeading": "Just Do",
     "homeBlog": "James Blog",
     "homePage": "首页",
     "categories": "分类",
     "tags": "标签",
-    "about": "关于"
+    "about": "关于",
+    "menu": "目录"
   },
 
   "home": {
+    "siteHeading": "James Blog",
+    "subHeading": "Just Do",
     "newer": "上一页",
-    "older": "下一页"
+    "older": "下一页",
+    "postedOn": "发表于",
+    "readTimes": "阅读数",
+    "commentTimes": "评论数",
+    "isTop": "置顶"
   }
 }

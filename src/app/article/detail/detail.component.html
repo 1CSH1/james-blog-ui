@@ -1,0 +1,26 @@
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('../../../assets/clean-blog/img/post-bg.jpg')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+        <div class="post-heading">
+          <h1>{{ articleDetail.title }}</h1>
+          <h2 class="subheading"> {{ articleDetail.subtitle }}</h2>
+          <span class="meta">Posted by <a href="#">{{ articleDetail.author }}</a> on {{ articleDetail.time }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+        {{ articleDetail.content }}
+      </div>
+    </div>
+  </div>
+</article>
+

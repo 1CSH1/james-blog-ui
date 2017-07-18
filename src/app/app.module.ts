@@ -9,7 +9,7 @@ import {RouterModule} from "@angular/router";
 
 import { AppComponent } from './app.component';
 import {appRoutes} from "./app.routes";
-import {HomeModule} from "./home/home.module";
+import {ArticleModule} from "./article/article.module";
 
 
 export function createTranslateHttpLoader(http: Http) {
@@ -18,14 +18,13 @@ export function createTranslateHttpLoader(http: Http) {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
-    RouterModule,
-    HomeModule,
+    ArticleModule,
     /**
      * ngx-translate
      */
