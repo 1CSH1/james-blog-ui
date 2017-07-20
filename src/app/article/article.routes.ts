@@ -13,9 +13,10 @@ export const articleRoutes: Routes = [
     component: HomeComponent
   },
   {
-    path: "detail/:id/",
+    path: ":year/:month/:day/:title/",
     component: DetailComponent
   }
+
   /*
   {
     path: "**",

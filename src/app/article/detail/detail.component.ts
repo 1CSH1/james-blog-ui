@@ -21,13 +21,19 @@ export class DetailComponent implements OnInit {
     this.activateRoute.params.subscribe(
       params => {
 console.log(params);
-        this.articleDetail.id = params["id"];
-        this.getArticle();
+        let year = params["year"];
+        let month = params["month"];
+        let day = params["day"];
+        let title = params["title"];
+        let date = new Date(year, month - 1, day);
+        this.getArticle(date, title);
+console.log("日期" + date);
+console.log("title: " + title);
     })
   }
 
-  getArticle() {
-    this.detailService.getArticle(this.articleDetail.id).subscribe(
+  getArticle(date: Date, title: string) {
+    this.detailService.getArticle(date, title).subscribe(
       response => {
         this.articleDetail = response["data"];
 console.log(this.articleDetail);

@@ -8,7 +8,17 @@
       "content": "This is Content",
       "readTimes": 9999,
       "commentTimes": 999,
-      "isTop": false
+      "isTop": false,
+      "categories": [
+        {
+          "id": 1,
+          "name": "Angular"
+        },
+        {
+          "id": 2,
+          "name": "Spring Cloud"
+        }
+      ]
     }
 
 }

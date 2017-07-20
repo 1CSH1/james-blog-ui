@@ -14,8 +14,15 @@
     "newer": "Newer Posts",
     "older": "Older Posts",
     "postedOn": "Posted on",
-    "readTimes": "read times",
-    "commentTimes": "comment times",
+    "readTimes": "Read times",
+    "commentTimes": "Comment times",
     "isTop": "Top"
+  },
+
+  "detail": {
+    "postedOn": "Posted on",
+    "categoriedIn": "Categoried in",
+    "readTimes": "Read times",
+    "commentTimes": "Comment times"
   }
 }

@@ -1,3 +1,4 @@
+import {Category} from "./Category";
 /**
  * Created by jamescsh on 7/11/17.
  */
@@ -11,4 +12,5 @@ export class Article {
   readTimes: number;
   commentTimes: number;
   isTop: boolean;
+  categories: Category[];
 }
