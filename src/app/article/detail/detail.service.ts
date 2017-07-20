@@ -14,10 +14,9 @@ export class DetailService {
   constructor(private http: Http) {
   }
 
-  public getArticle(time: Date, title: string): Observable<Article> {
+  public getArticle(id: number): Observable<Article> {
     let params = new URLSearchParams();
-    params.set("time", time.toDateString());
-    params.set("title", title);
+    params.set("id", id.toString());
 
     return this.http
       .get(this.url, {search: params})

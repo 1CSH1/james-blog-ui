@@ -33,11 +33,13 @@ console.log(params);
   }
 
   changePage(pageNo: number) {
+    // 换页
     this.page.pageNo = pageNo;
     this.router.navigateByUrl("page/" + this.page.pageNo + "/");
   }
 
   getArticles() {
+    // 获取某一页的文章
     this.homeService.getArticles(this.page.pageSize, this.page.pageNo).subscribe(
       response => {
         this.articles = response['data'];

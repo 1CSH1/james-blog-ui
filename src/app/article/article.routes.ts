@@ -13,15 +13,13 @@ export const articleRoutes: Routes = [
     component: HomeComponent
   },
   {
-    path: ":year/:month/:day/:title/",
+    path: "detail/:id/",
     component: DetailComponent
-  },
-  {
-    path: "detail/:id",
-    component: DetailComponent
-  },
+  }
+  /*
   {
     path: "**",
     redirectTo: "page/1/"
   }
+  */
 ];

@@ -20,22 +20,14 @@ export class DetailComponent implements OnInit {
   ngOnInit() {
     this.activateRoute.params.subscribe(
       params => {
-        let year = params["year"];
-        let month = params["month"];
-        let day = params["day"];
-        let title = params["title"];
-
-        let id = params["id"];
-console.log("id------------------" + id);
-
-        this.articleDetail.time = new Date(year, month, day);
-        this.articleDetail.title = title;
+console.log(params);
+        this.articleDetail.id = params["id"];
         this.getArticle();
     })
   }
 
   getArticle() {
-    this.detailService.getArticle(this.articleDetail.time, this.articleDetail.title).subscribe(
+    this.detailService.getArticle(this.articleDetail.id).subscribe(
       response => {
         this.articleDetail = response["data"];
 console.log(this.articleDetail);

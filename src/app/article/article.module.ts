@@ -4,7 +4,6 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 import {SharedModule} from "../shared/shared.module";
 import {articleRoutes} from "./article.routes";
-import {ArticleComponent} from "./article.component";
 import {DetailComponent} from "./detail/detail.component";
 import {HomeService} from "./home/home.service";
 import {HomeComponent} from "./home/home.component";
@@ -17,7 +16,6 @@ import {DetailService} from "./detail/detail.service";
     NgbModule.forRoot()
   ],
   declarations: [
-    ArticleComponent,
     HomeComponent,
     DetailComponent
   ],

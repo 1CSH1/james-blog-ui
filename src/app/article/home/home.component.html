@@ -17,8 +17,7 @@
   <div class="row">
     <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
       <div *ngFor="let article of articles" class="post-preview">
-        <!--<a href="/2017/07/1articleAicle.title}}/">-->
-        <a href="/detail/1">
+        <a [routerLink]="['/detail', article.id , '']">
           <h2 class="post-title">
             {{ article.title }}
           </h2>
@@ -28,12 +27,6 @@
         </a>
         <p class="post-meta">
           {{ 'home.postedOn' | translate }}&nbsp;{{ article.time }}&nbsp;|&nbsp;
-          <!--
-          {{ 'home.categoriedIn' | translate}} &nbsp;
-          <a *ngFor="let category of article.categories">
-
-          </a>
-          -->
           {{ 'home.readTimes' | translate }}:&nbsp;{{ article.readTimes }}&nbsp;|&nbsp;
           {{ 'home.commentTimes' | translate}}:&nbsp;{{ article.commentTimes }}
           <span *ngIf="article.isTop">&nbsp;|&nbsp;{{ 'home.isTop' | translate }}</span>
