@@ -35,7 +35,7 @@ console.log(params);
   changePage(pageNo: number) {
     // 换页
     this.page.pageNo = pageNo;
-    this.router.navigateByUrl("page/" + this.page.pageNo + "/");
+    this.router.navigateByUrl("page/" + this.page.pageNo);
   }
 
   getArticles() {

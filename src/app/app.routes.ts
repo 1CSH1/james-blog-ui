@@ -8,7 +8,6 @@ export const appRoutes: Routes = [
   },
   {
     path: "**",
-    redirectTo: "",
-    pathMatch: "full"
+    loadChildren: "./article/article.module#ArticleModule"
   }
 ]

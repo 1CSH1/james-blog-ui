@@ -22,6 +22,7 @@ export function createTranslateHttpLoader(http: Http) {
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     HttpModule,
     FormsModule,
     ArticleModule,

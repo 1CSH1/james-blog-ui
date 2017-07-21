@@ -11,6 +11,7 @@ import {DetailService} from "./detail/detail.service";
 
 @NgModule({
   imports: [
+    RouterModule,
     RouterModule.forChild(articleRoutes),
     SharedModule,
     NgbModule.forRoot()

@@ -5,15 +5,15 @@ import {DetailComponent} from "./detail/detail.component";
 export const articleRoutes: Routes = [
   {
     path: "",
-    redirectTo: "page/1/",
+    redirectTo: "page/1",
     pathMatch: "full"
   },
   {
-    path: "page/:page/",
+    path: "page/:page",
     component: HomeComponent
   },
   {
-    path: ":year/:month/:day/:title/",
+    path: ":year/:month/:day/:title",
     component: DetailComponent
   }
 
