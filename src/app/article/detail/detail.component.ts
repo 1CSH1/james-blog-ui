@@ -35,6 +35,7 @@ console.log("title: " + title);
   getArticle(date: Date, title: string) {
     this.detailService.getArticle(date, title).subscribe(
       response => {
+console.log(response["data"]);
         this.articleDetail = response["data"];
 console.log(this.articleDetail);
       },

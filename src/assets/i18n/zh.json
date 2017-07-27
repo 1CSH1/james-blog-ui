@@ -18,10 +18,17 @@
     "commentTimes": "评论数",
     "isTop": "置顶"
   },
+
   "detail": {
     "postedOn": "发表于",
     "categoriedIn": "分类于",
     "readTimes": "阅读数",
     "commentTimes": "评论数"
+  },
+
+  "comment": {
+    "leaveComment": "发表评论",
+    "reply": "引用"
   }
+
 }

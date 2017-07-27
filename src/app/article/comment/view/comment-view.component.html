@@ -1,0 +1,15 @@
+<div *ngFor="let comment of comments">
+  <div class="media">
+    <div class="pull-left">
+      <span class="media-object"></span>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">{{ comment.username }}
+        <small class="pull-right">{{ comment.time }}&nbsp;|&nbsp;<a href="">{{ 'comment.reply' | translate }}</a></small>
+      </h4>
+       {{ comment.content }}
+      <hr>
+      <comment-view *ngIf="comment.pComment != null" [comments]="comment.pComment"></comment-view>
+    </div>
+  </div>
+</div>

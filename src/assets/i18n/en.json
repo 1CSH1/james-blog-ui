@@ -24,5 +24,10 @@
     "categoriedIn": "Categoried in",
     "readTimes": "Read times",
     "commentTimes": "Comment times"
+  },
+
+  "comment": {
+    "leaveComment": "Leave a Comment",
+    "reply": "Reply"
   }
 }
