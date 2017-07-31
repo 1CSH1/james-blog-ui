@@ -5,11 +5,11 @@
     </div>
     <div class="media-body">
       <h4 class="media-heading">{{ comment.username }}
-        <small class="pull-right">{{ comment.time }}&nbsp;|&nbsp;<a href="">{{ 'comment.reply' | translate }}</a></small>
+        <small class="pull-right">{{ comment.time }}&nbsp;|&nbsp;<a href="{{url}}" (click)="reply(comment)" >{{ 'comment.reply' | translate }}</a></small>
       </h4>
        {{ comment.content }}
       <hr>
-      <comment-view *ngIf="comment.pComment != null" [comments]="comment.pComment"></comment-view>
+      <comment-view *ngIf="comment.cComments != null" [comments]="comment.cComments" (contentEvent)="transferToParent($event)"></comment-view>
     </div>
   </div>
 </div>

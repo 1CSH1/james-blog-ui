@@ -3,18 +3,19 @@
   <div class="row">
     <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
 
-      <comment-view [comments]="comments"></comment-view>
+      <comment-view [comments]="comments" (contentEvent)="getReplyComment($event)" ></comment-view>
 
-      <div class="well">
+      <div class="well" id="comment">
         <h4>{{ 'comment.leaveComment' | translate }}</h4>
         <form role="form">
           <div class="form-group">
-            <textarea class="form-control" rows="3"></textarea>
+            <input type="hidden" [(ngModel)]="id" name="id">
+            <textarea [(ngModel)]="content" name="content" class="form-control" rows="5"></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
-
     </div>
   </div>
 </div>
+

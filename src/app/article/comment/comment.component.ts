@@ -10,9 +10,19 @@ export class CommentComponent implements OnInit {
 
   @Input()
   public comments: Comment[];
-  @Input()
-  public comment: Comment;
+
+  // 要回复的评论
+  public replyComment: Comment = new Comment();
+
+  public id: number = 0;
+  public content: string = "";
 
   ngOnInit(): void {
+  }
+
+  getReplyComment(event) {
+    this.replyComment = event;
+    this.id = this.replyComment.id;
+    this.content = "[reply]" + this.replyComment.username + "[reply]\n";
   }
 }

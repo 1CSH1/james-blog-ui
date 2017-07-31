@@ -8,5 +8,5 @@ export class Comment {
   content: string;
   status: number;
   email: string;
-  pComment: Comment;
+  cComments: Comment[];
 }
