@@ -28,6 +28,10 @@
 
   "comment": {
     "leaveComment": "Leave a Comment",
-    "reply": "Reply"
+    "reply": "Reply",
+    "email": "Email Address",
+    "name": "NickName",
+    "message": "Message",
+    "submit": "Submit"
   }
 }

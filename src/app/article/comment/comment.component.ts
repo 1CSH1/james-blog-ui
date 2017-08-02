@@ -16,6 +16,8 @@ export class CommentComponent implements OnInit {
 
   public id: number = 0;
   public content: string = "";
+  public email: string = "";
+  public name: string = "";
 
   ngOnInit(): void {
   }
@@ -24,5 +26,9 @@ export class CommentComponent implements OnInit {
     this.replyComment = event;
     this.id = this.replyComment.id;
     this.content = "[reply]" + this.replyComment.username + "[reply]\n";
+  }
+
+  submit() {
+    alert(this.email + " --- " + this.name + " --- " + this.content);
   }
 }
