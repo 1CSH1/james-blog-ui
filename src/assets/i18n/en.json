@@ -30,8 +30,8 @@
     "leaveComment": "Leave a Comment",
     "reply": "Reply",
     "email": "Email Address",
-    "name": "NickName",
-    "message": "Message",
+    "nickname": "NickName",
+    "content": "Content",
     "submit": "Submit"
   }
 }

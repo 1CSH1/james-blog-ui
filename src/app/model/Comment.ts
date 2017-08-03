@@ -4,6 +4,7 @@
 export class Comment {
   id: number;
   username: string;
+  nickname: string;
   time: Date;
   content: string;
   status: number;

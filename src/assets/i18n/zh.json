@@ -30,8 +30,8 @@
     "leaveComment": "发表评论",
     "reply": "引用",
     "email": "邮箱",
-    "name": "昵称",
-    "message": "内容",
+    "nickname": "昵称",
+    "content": "内容",
     "submit": "提交"
   }
 

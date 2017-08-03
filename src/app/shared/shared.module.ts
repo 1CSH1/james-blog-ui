@@ -1,13 +1,13 @@
 import {NgModule} from "@angular/core";
 import {TranslateModule} from "@ngx-translate/core";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {CommonModule} from "@angular/common";
 
 @NgModule({
   imports: [
     CommonModule,
     TranslateModule,
-    FormsModule,
+    FormsModule
   ],
   declarations: [
 
