@@ -17,7 +17,7 @@ export class CommentComponent implements OnInit {
     // 要回复的评论
   public replyComment: Comment = new Comment();
 
-  public id: number = 0;
+  public pid: number = 0;
   public content: string = "";
   public email: string = "";
   public name: string = "";
@@ -37,17 +37,15 @@ export class CommentComponent implements OnInit {
 
   getReplyComment(event) {
     this.replyComment = event;
-    this.id = this.replyComment.id;
+    this.pid = this.replyComment.id;
     this.content = "[reply]" + this.replyComment.username + "[reply]\n";
-  }
-
-  submit() {
-    alert(this.email + " --- " + this.name + " --- " + this.content);
+     this.commentForm.value.content = this.content;
   }
 
   sendComment() {
     if (this.commentForm.valid) {
       this.comment = this.commentForm.value;
+console.log(this.pid + " --- " + this.comment.nickname + " --- " + this.comment.email + " --- " + this.comment.content);
       this.commentService.sendComment(this.comment)
         .subscribe(
           data => {

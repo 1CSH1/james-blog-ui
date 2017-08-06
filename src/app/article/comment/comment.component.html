@@ -9,6 +9,7 @@
         <h4>{{ 'comment.leaveComment' | translate }}</h4>
 
         <form [formGroup]="commentForm" (ngSubmit)="sendComment()" role="form" novalidate>
+
           <div class="control-group">
             <div class="form-group floating-label-form-group controls" [ngClass]="{'has-error': formErrors.nickname}">
               <label>{{ 'comment.nickname' | translate }}</label>
@@ -30,7 +31,7 @@
           <div class="control-group">
             <div class="form-group floating-label-form-group controls"  [ngClass]="{'has-error': formErrors.content}">
               <label>{{ 'comment.content' | translate }}</label>
-              <textarea formControlName="content" rows="5" class="form-control" placeholder="{{ 'comment.content' | translate }}"></textarea>
+              <textarea formControlName="content" rows="5" class="form-control" placeholder="{{ 'comment.content' | translate }}" value="{{content}}"></textarea>
               <p *ngIf="formErrors.content"  class="help-block text-danger">
                 {{ formErrors.content }}
               </p>
