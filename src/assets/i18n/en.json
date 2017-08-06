@@ -33,5 +33,12 @@
     "nickname": "NickName",
     "content": "Content",
     "submit": "Submit"
+  },
+
+  "categories" : {
+    "title" : {
+      "prefix": "Currently, there are ",
+      "suffix": "categories"
+    }
   }
 }

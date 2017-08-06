@@ -15,12 +15,14 @@ export const articleRoutes: Routes = [
   {
     path: ":year/:month/:day/:title",
     component: DetailComponent
-  }
-
-  /*
+  },
+  {
+    path: "categories",
+    loadChildren: "./categories/categories.module#CategoriesModule"
+  },
   {
     path: "**",
-    redirectTo: "page/1/"
+    redirectTo: "page/1",
+    pathMatch: "full"
   }
-  */
 ];

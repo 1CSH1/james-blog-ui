@@ -1,0 +1,56 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Angular",
+      "total": 10
+    },
+    {
+      "id": 2,
+      "name": "Spring Cloud",
+      "total": 20
+    },
+    {
+      "id": 3,
+      "name": "Eureka",
+      "total": 5
+    },
+    {
+      "id": 4,
+      "name": "Java",
+      "total": 30
+    },
+    {
+      "id": 5,
+      "name": "Zuul",
+      "total": 2
+    },
+    {
+      "id": 6,
+      "name": "Ribbon",
+      "total": 1
+    },
+    {
+      "id": 7,
+      "name": "Fetch",
+      "total": 2
+    },
+    {
+      "id": 8,
+      "name": "Bootstrap",
+      "total": 1
+    },
+    {
+      "id": 9,
+      "name": "Docker",
+      "total": 2
+    },
+    {
+      "id": 10,
+      "name": "RabbitMQ",
+      "total": 3
+    }
+  ]
+
+
+}

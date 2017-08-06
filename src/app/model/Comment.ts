@@ -10,4 +10,5 @@ export class Comment {
   status: number;
   email: string;
   cComments: Comment[];
+  pid: number;
 }

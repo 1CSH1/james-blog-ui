@@ -1,0 +1,44 @@
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('../../../../assets/clean-blog/img/home-bg.jpg')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+        <div class="site-heading">
+          <h1>{{ 'home.siteHeading' | translate }}</h1>
+          <span class="subheading">{{ 'home.subHeading' | translate }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+      <div *ngFor="let article of articles" class="post-preview">
+        <a [routerLink]="['/2017/07/20/', article.title]">
+          <h2 class="post-title">
+            {{ article.title }}
+          </h2>
+          <h3 class="post-subtitle">
+            {{ article.subtitle }}
+          </h3>
+        </a>
+        <p class="post-meta">
+          {{ 'home.postedOn' | translate }}&nbsp;{{ article.time }}&nbsp;|&nbsp;
+          {{ 'home.readTimes' | translate }}:&nbsp;{{ article.readTimes }}&nbsp;|&nbsp;
+          {{ 'home.commentTimes' | translate}}:&nbsp;{{ article.commentTimes }}
+          <span *ngIf="article.isTop">&nbsp;|&nbsp;{{ 'home.isTop' | translate }}</span>
+        </p>
+      </div>
+      <hr>
+
+      <!-- Pager -->
+      <div class="clearfix">
+        <button (click)="changePage(page.pageNo - 1)" *ngIf="!page.isFirst" class="btn btn-secondary float-left">&larr; {{ 'home.newer' | translate }}</button>
+        <button (click)="changePage(page.pageNo + 1)" *ngIf="!page.isLast" class="btn btn-secondary float-right">{{ 'home.older' | translate }} &rarr;</button>
+      </div>
+    </div>
+  </div>
+</div>

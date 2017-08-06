@@ -14,11 +14,11 @@ export class DetailComponent implements OnInit {
 
   constructor(private detailService: DetailService,
               private router: Router,
-              private activateRoute: ActivatedRoute) {
+              private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit() {
-    this.activateRoute.params.subscribe(
+    this.activatedRoute.params.subscribe(
       params => {
 console.log(params);
         let year = params["year"];

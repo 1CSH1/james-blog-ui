@@ -33,6 +33,13 @@
     "nickname": "昵称",
     "content": "内容",
     "submit": "提交"
+  },
+
+  "categories" : {
+    "title" : {
+      "prefix": "目前共计",
+      "suffix": "分类"
+    }
   }
 
 }

@@ -11,7 +11,7 @@
             {{ 'detail.postedOn' | translate }}&nbsp;{{ articleDetail.time }}&nbsp;|&nbsp;
             {{ 'detail.categoriedIn' | translate }}&nbsp;
             <span *ngFor="let category of articleDetail.categories">
-              <a [routerLink]="['/category', category.id, '']" >{{ category.name }}</a>&nbsp;
+              <a [routerLink]="['/categories', category.name, 1]" >{{ category.name }}</a>&nbsp;
             </span>
             &nbsp;|&nbsp;
             {{ 'detail.readTimes' | translate }}:&nbsp;{{ articleDetail.readTimes }}&nbsp;|&nbsp;

@@ -19,12 +19,12 @@ export class HomeComponent implements OnInit {
   constructor(
     private homeService: HomeService,
     private router: Router,
-    private activateRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute
   ){
   }
 
   ngOnInit(): void {
-    this.activateRoute.params.subscribe(params => {
+    this.activatedRoute.params.subscribe(params => {
 console.log(params);
       this.page.pageNo = params['page'];
       this.getArticles()
