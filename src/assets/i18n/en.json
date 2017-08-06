@@ -10,7 +10,7 @@
 
   "home": {
     "siteHeading": "James Blog",
-    "subHeading": "Just Do",
+    "subHeading": "Home",
     "newer": "Newer Posts",
     "older": "Older Posts",
     "postedOn": "Posted on",
@@ -36,9 +36,29 @@
   },
 
   "categories" : {
+    "subHeading": "Categories",
     "title" : {
       "prefix": "Currently, there are ",
       "suffix": "categories"
+    },
+    "category": {
+      "title" : "Category"
     }
+  },
+
+  "tags" : {
+    "subHeading": "Tags",
+    "title" : {
+      "prefix": "Currently, there are ",
+      "suffix": "tags"
+    },
+    "tag": {
+      "title" : "Tag"
+    }
+  },
+
+  "about": {
+    "subHeading": "About Me"
   }
+
 }

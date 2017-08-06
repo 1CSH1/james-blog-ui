@@ -10,7 +10,7 @@
 
   "home": {
     "siteHeading": "James Blog",
-    "subHeading": "Just Do",
+    "subHeading": "首页",
     "newer": "上一页",
     "older": "下一页",
     "postedOn": "发表于",
@@ -36,10 +36,29 @@
   },
 
   "categories" : {
+    "subHeading": "分类",
     "title" : {
       "prefix": "目前共计",
-      "suffix": "分类"
+      "suffix": "个分类"
+    },
+    "category": {
+      "title" : "分类"
     }
+  },
+
+  "tags" : {
+    "subHeading": "标签",
+    "title" : {
+      "prefix": "目前共计",
+      "suffix": "个标签"
+    },
+    "tag": {
+      "title" : "标签"
+    }
+  },
+
+  "about": {
+    "subHeading": "关于我"
   }
 
 }

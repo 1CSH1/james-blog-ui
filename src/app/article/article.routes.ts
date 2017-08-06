@@ -21,6 +21,14 @@ export const articleRoutes: Routes = [
     loadChildren: "./categories/categories.module#CategoriesModule"
   },
   {
+    path: "tags",
+    loadChildren: "./tags/tags.module#TagsModule"
+  },
+  {
+    path: "about",
+    loadChildren: "./about/about.module#AboutModule"
+  },
+  {
     path: "**",
     redirectTo: "page/1",
     pathMatch: "full"
