@@ -2,43 +2,63 @@
   "data": [
     {
       "id": 1,
-      "name": "Angular"
+      "name": "Angular",
+      "font": "11px",
+      "color": "#ccc"
     },
     {
       "id": 2,
-      "name": "Spring Cloud"
+      "name": "Spring Cloud",
+      "font": "22px",
+      "color": "#111"
     },
     {
       "id": 3,
-      "name": "Eureka"
+      "name": "Eureka",
+      "font": "13px",
+      "color": "#555"
     },
     {
       "id": 4,
-      "name": "Java"
+      "name": "Java",
+      "font": "14px",
+      "color": "#666"
     },
     {
       "id": 5,
-      "name": "Zuul"
+      "name": "Zuul",
+      "font": "15px",
+      "color": "#777"
     },
     {
       "id": 6,
-      "name": "Ribbon"
+      "name": "Ribbon",
+      "font": "25px",
+      "color": "#aaa"
     },
     {
       "id": 7,
-      "name": "Fetch"
+      "name": "Fetch",
+      "font": "13px",
+      "color": "#333"
     },
     {
       "id": 8,
-      "name": "Bootstrap"
+      "name": "Bootstrap",
+      "font": "20px",
+      "color": "#999"
     },
     {
       "id": 9,
-      "name": "Docker"
+      "name": "Docker",
+      "font": "12px",
+      "color": "#222"
     },
     {
       "id": 10,
-      "name": "RabbitMQ"
+      "name": "RabbitMQ",
+      "font": "16px",
+      "color": "#777"
     }
   ]
 

@@ -17,9 +17,11 @@
   <div class="row">
     <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
       <div *ngIf="tags != null" class="title"> {{ 'tags.title.prefix' | translate }} {{ tags.length }} {{'tags.title.suffix' | translate}}</div>
-      <div *ngFor="let tag of tags">
-        <a [routerLink]="['/tags/',tag.name, 1]">{{ tag.name }}</a>
-      </div>
+      <span *ngFor="let tag of tags">
+        <a [routerLink]="['/tags/',tag.name, 1]" [ngStyle]="{'font-size': tag.font, 'color': tag.color }">{{ tag.name }}</a>
+      </span>
     </div>
   </div>
 </div>
+
+

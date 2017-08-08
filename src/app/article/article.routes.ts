@@ -27,10 +27,11 @@ export const articleRoutes: Routes = [
   {
     path: "about",
     loadChildren: "./about/about.module#AboutModule"
-  },
-  {
-    path: "**",
-    redirectTo: "page/1",
-    pathMatch: "full"
   }
+  // ,
+  // {
+  //   path: "**",
+  //   redirectTo: "page/1",
+  //   pathMatch: "full"
+  // }
 ];

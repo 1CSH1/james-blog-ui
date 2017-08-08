@@ -9,7 +9,7 @@ import {AboutService} from "./about.service";
 })
 export class AboutComponent implements OnInit {
 
-  public about: About;
+  public about: About = new About();
 
   constructor(private aboutService: AboutService) { }
 
