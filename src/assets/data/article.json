@@ -1,231 +1,72 @@
 {
-  "data":{
+  "article": {
+    "createdTime": 1508769102217,
+    "modifiedTime": 1508769102217,
+    "id": 1,
+    "title": "主题1",
+    "subtitle": "副主题1",
+    "author": "作者1",
+    "content": "内容1",
+    "readNumber": 100,
+    "commentNumber": 100,
+    "top": true
+  },
+  "tags": [
+    {
+      "createdTime": 1508855785682,
+      "modifiedTime": 1508855785682,
       "id": 1,
-      "title": "This is Title",
-      "subtitle": "This is Subtitle",
-      "author": "James CSH",
-      "time": "2017-07-09 20:00:00",
-      "content": "This is Content",
-      "readTimes": 9999,
-      "commentTimes": 999,
-      "isTop": false,
-      "categories": [
-        {
-          "id": 1,
-          "name": "Angular"
-        },
-        {
-          "id": 2,
-          "name": "Spring Cloud"
-        }
-      ],
-      "comments": [
-        {
-          "id": 1,
-          "username": "James1",
-          "time": "2017-07-09 21:02:21",
-          "content": "哈哈哈1<h1>哈哈哈</h1>",
-          "status": 1,
-          "email": "1xxxx@xx.com",
-          "cComments": [
-              {
-              "id": 2,
-              "username": "James2",
-              "time": "2017-07-09 21:02:22",
-              "content": "哈哈哈2",
-              "status": 1,
-              "email": "2xxxx@xx.com",
-              "cComments": null
-            }
-          ]
-        },
-        {
-          "id": 3,
-          "username": "James3",
-          "time": "2017-07-09 21:02:23",
-          "content": "哈哈哈3",
-          "status": 1,
-          "email": "3xxxx@xx.com",
-          "cComments": null
-        },
-        {
-          "id": 4,
-          "username": "James4",
-          "time": "2017-07-09 21:02:24",
-          "content": "哈哈哈4",
-          "status": 1,
-          "email": "4xxxx@xx.com",
-          "cComments": [
-            {
-              "id": 5,
-              "username": "James5",
-              "time": "2017-07-09 21:02:25",
-              "content": "哈哈哈5",
-              "status": 1,
-              "email": "5xxxx@xx.com",
-              "cComments": null
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "username": "James4",
-          "time": "2017-07-09 21:02:24",
-          "content": "哈哈哈4",
-          "status": 1,
-          "email": "4xxxx@xx.com",
-          "cComments": [
-            {
-              "id": 5,
-              "username": "James5",
-              "time": "2017-07-09 21:02:25",
-              "content": "哈哈哈5",
-              "status": 1,
-              "email": "5xxxx@xx.com",
-              "cComments": null
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "username": "James4",
-          "time": "2017-07-09 21:02:24",
-          "content": "哈哈哈4",
-          "status": 1,
-          "email": "4xxxx@xx.com",
-          "cComments": [
-            {
-              "id": 5,
-              "username": "James5",
-              "time": "2017-07-09 21:02:25",
-              "content": "哈哈哈5",
-              "status": 1,
-              "email": "5xxxx@xx.com",
-              "cComments": null
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "username": "James4",
-          "time": "2017-07-09 21:02:24",
-          "content": "哈哈哈4",
-          "status": 1,
-          "email": "4xxxx@xx.com",
-          "cComments": [
-            {
-              "id": 5,
-              "username": "James5",
-              "time": "2017-07-09 21:02:25",
-              "content": "哈哈哈5",
-              "status": 1,
-              "email": "5xxxx@xx.com",
-              "cComments": null
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "username": "James4",
-          "time": "2017-07-09 21:02:24",
-          "content": "哈哈哈4",
-          "status": 1,
-          "email": "4xxxx@xx.com",
-          "cComments": [
-            {
-              "id": 5,
-              "username": "James5",
-              "time": "2017-07-09 21:02:25",
-              "content": "哈哈哈5",
-              "status": 1,
-              "email": "5xxxx@xx.com",
-              "cComments": null
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "username": "James4",
-          "time": "2017-07-09 21:02:24",
-          "content": "哈哈哈4",
-          "status": 1,
-          "email": "4xxxx@xx.com",
-          "cComments": [
-            {
-              "id": 5,
-              "username": "James5",
-              "time": "2017-07-09 21:02:25",
-              "content": "哈哈哈5",
-              "status": 1,
-              "email": "5xxxx@xx.com",
-              "cComments": null
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "username": "James4",
-          "time": "2017-07-09 21:02:24",
-          "content": "哈哈哈4",
-          "status": 1,
-          "email": "4xxxx@xx.com",
-          "cComments": [
-            {
-              "id": 5,
-              "username": "James5",
-              "time": "2017-07-09 21:02:25",
-              "content": "哈哈哈5",
-              "status": 1,
-              "email": "5xxxx@xx.com",
-              "cComments":
-              [
-                {
-                  "id": 5,
-                  "username": "James5",
-                  "time": "2017-07-09 21:02:25",
-                  "content": "哈哈哈5",
-                  "status": 1,
-                  "email": "5xxxx@xx.com",
-                  "cComments":
-                    [
-                      {
-                        "id": 1,
-                        "username": "James1",
-                        "time": "2017-07-09 21:02:25",
-                        "content": "哈哈哈5",
-                        "status": 1,
-                        "email": "5xxxx@xx.com",
-                        "cComments":
-                          [
-                            {
-                              "id": 5,
-                              "username": "James5",
-                              "time": "2017-07-09 21:02:25",
-                              "content": "哈哈哈5",
-                              "status": 1,
-                              "email": "5xxxx@xx.com",
-                              "cComments":
-                                [
-                                  {
-                                    "id": 5,
-                                    "username": "James5",
-                                    "time": "2017-07-09 21:02:25",
-                                    "content": "哈哈哈5",
-                                    "status": 1,
-                                    "email": "5xxxx@xx.com",
-                                    "cComments": null
-                                  }
-                                ]
-                            }
-                          ]
-                      }
-                    ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
+      "name": "标签1"
     }
-
+  ],
+  "categories": [
+    {
+      "createdTime": 1508855785682,
+      "modifiedTime": 1508855785682,
+      "id": 1,
+      "name": "分类1"
+    }
+  ],
+  "comments": [
+    {
+      "createdTime": 1508855785682,
+      "modifiedTime": 1508855785682,
+      "id": 1,
+      "name": "评论1",
+      "content": "评论",
+      "email": "1111@qq.com",
+      "status": 1,
+      "pId": 1
+    },
+    {
+      "createdTime": 1508855785682,
+      "modifiedTime": 1508855785682,
+      "id": 5,
+      "name": "评论5",
+      "content": "评论",
+      "email": "1111@qq.com",
+      "status": 1,
+      "pId": 1
+    },
+    {
+      "createdTime": 1508855785682,
+      "modifiedTime": 1508855785682,
+      "id": 10,
+      "name": "评论10",
+      "content": "评论",
+      "email": "1111@qq.com",
+      "status": 1,
+      "pId": 5
+    },
+    {
+      "createdTime": 1508855785682,
+      "modifiedTime": 1508855785682,
+      "id": 13,
+      "name": "评论13",
+      "content": "评论",
+      "email": "1111@qq.com",
+      "status": 1,
+      "pId": 1
+    }
+  ]
 }

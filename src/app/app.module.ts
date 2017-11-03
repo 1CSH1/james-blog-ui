@@ -10,7 +10,8 @@ import {RouterModule} from "@angular/router";
 import { AppComponent } from './app.component';
 import {appRoutes} from "./app.routes";
 import {ArticleModule} from "./article/article.module";
-
+import {ToastrModule} from "ngx-toastr";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 export function createTranslateHttpLoader(http: Http) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -40,6 +41,10 @@ export function createTranslateHttpLoader(http: Http) {
      * ng-bootstrap
      */
     NgbModule.forRoot(),
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 2000,
+    }),
     RouterModule.forRoot(appRoutes)
   ],
   exports: [

@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {Http} from "@angular/http";
+import {Http, RequestOptions, Headers} from "@angular/http";
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/catch";
 import {Observable} from "rxjs/Observable";
@@ -14,6 +14,8 @@ export class HomeService {
   private homeUrl1: string = "assets/data/articles1.json";
   private homeUrl2: string = "assets/data/articles2.json";
   private homeUrl3: string = "assets/data/articles3.json";
+  private homeUrl: string = "http://localhost:5022/articles"
+
 
   constructor(public http: Http) {
 
@@ -24,17 +26,12 @@ export class HomeService {
     let params = new URLSearchParams();
     params.set("pageNo", pageNo.toString());
     params.set("pageSize", pageSize.toString());
+    let headers = new Headers({'Content-Type': 'application/json'});
+    let options = new RequestOptions({headers: headers});
 
-    let homeUrl = "";
-    if (pageNo == 1) {
-      homeUrl = this.homeUrl1;
-    } else if (pageNo == 2) {
-      homeUrl = this.homeUrl2;
-    } else {
-      homeUrl = this.homeUrl3
-    }
+    let homeUrl = this.homeUrl;
     return this.http
-      .get(homeUrl, {search: params})
+      .post(homeUrl, {params}, options)
       .map(response => {
         let result = response.json();
         console.log(result);

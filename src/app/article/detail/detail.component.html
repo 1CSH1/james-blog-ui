@@ -8,14 +8,14 @@
           <h2 class="subheading"> {{ articleDetail.subtitle }}</h2>
           <span class="meta">
             <!--Posted by <a href="#">{{ articleDetail.author }}</a> on {{ articleDetail.time }}-->
-            {{ 'detail.postedOn' | translate }}&nbsp;{{ articleDetail.time }}&nbsp;|&nbsp;
+            {{ 'detail.postedOn' | translate }}&nbsp;{{ articleDetail.createdTime | date: "yyyy-MM-dd HH:mm:ss" }}&nbsp;|&nbsp;
             {{ 'detail.categoriedIn' | translate }}&nbsp;
             <span *ngFor="let category of articleDetail.categories">
               <a [routerLink]="['/categories', category.name, 1]" >{{ category.name }}</a>&nbsp;
             </span>
             &nbsp;|&nbsp;
-            {{ 'detail.readTimes' | translate }}:&nbsp;{{ articleDetail.readTimes }}&nbsp;|&nbsp;
-            {{ 'detail.commentTimes' | translate}}:&nbsp;{{ articleDetail.commentTimes }}
+            {{ 'detail.readTimes' | translate }}:&nbsp;{{ articleDetail.readNumber }}&nbsp;|&nbsp;
+            {{ 'detail.commentTimes' | translate}}:&nbsp;{{ articleDetail.commentNumber }}
           </span>
         </div>
       </div>

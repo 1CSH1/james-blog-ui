@@ -1,63 +1,68 @@
 {
-  "pageSize": 5,
-  "pageNo": 1,
-  "isFirst": true,
-  "isLast": false,
-  "data": [
+  "articles": [
     {
+      "createdTime": 1508769102217,
+      "modifiedTime": 1508769102217,
       "id": 1,
-      "title": "This is Title",
-      "subtitle": "This is Subtitle",
-      "author": "James CSH",
-      "time": "2017-07-09 20:00:00",
-      "content": "This is Content",
-      "readTimes": 9999,
-      "commentTimes": 999,
-      "isTop": false
+      "title": "主题1",
+      "subtitle": "副主题1",
+      "author": "作者1",
+      "content": "内容1",
+      "readNumber": 100,
+      "commentNumber": 100,
+      "top": true
     },
     {
+      "createdTime": 1508769102217,
+      "modifiedTime": 1508769102217,
       "id": 2,
-      "title": "这是标题",
-      "subtitle": "这是副标题",
-      "author": "陈烁",
-      "time": "2017-07-09 20:00:00",
-      "content": "这是内容，是不是太少啦",
-      "readTimes": 9999,
-      "commentTimes": 999,
-      "isTop": true
+      "title": "主题2",
+      "subtitle": "副主题2",
+      "author": "作者2",
+      "content": "内容1",
+      "readNumber": 100,
+      "commentNumber": 100,
+      "top": true
     },
     {
+      "createdTime": 1508769102217,
+      "modifiedTime": 1508769102217,
       "id": 3,
-      "title": "This is Title",
-      "subtitle": "This is Subtitle",
-      "author": "James CSH",
-      "time": "2017-07-09 20:00:00",
-      "content": "This is Content",
-      "readTimes": 9999,
-      "commentTimes": 999,
-      "isTop": true
+      "title": "主题3",
+      "subtitle": "副主题3",
+      "author": "作者3",
+      "content": "内容1",
+      "readNumber": 100,
+      "commentNumber": 100,
+      "top": true
     },
     {
+      "createdTime": 1508769102217,
+      "modifiedTime": 1508769102217,
       "id": 4,
-      "title": "这是标题",
-      "subtitle": "这是副标题",
-      "author": "陈烁",
-      "time": "2017-07-09 20:00:00",
-      "content": "这是内容，是不是太少啦",
-      "readTimes": 9999,
-      "commentTimes": 999,
-      "isTop": false
+      "title": "主题4",
+      "subtitle": "副主题4",
+      "author": "作者4",
+      "content": "内容1",
+      "readNumber": 100,
+      "commentNumber": 100,
+      "top": true
     },
     {
+      "createdTime": 1508769102217,
+      "modifiedTime": 1508769102217,
       "id": 5,
-      "title": "This is Title",
-      "subtitle": "This is Subtitle",
-      "author": "James CSH",
-      "time": "2017-07-09 20:00:00",
-      "content": "This is Content",
-      "readTimes": 9999,
-      "commentTimes": 999,
-      "isTop": false
+      "title": "主题5",
+      "subtitle": "副主题5",
+      "author": "作者5",
+      "content": "内容1",
+      "readNumber": 100,
+      "commentNumber": 100,
+      "top": true
     }
-  ]
+  ],
+  "pageNo": 1,
+  "pageSize": 5,
+  "last": false,
+  "first": false
 }

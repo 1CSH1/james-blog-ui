@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Category} from "../../model/Category";
 import {CategoriesService} from "./categories.service";
 import {Router, ActivatedRoute} from "@angular/router";
+import {HttpService} from "../common/http/http.service";
 
 @Component({
   selector: 'categories',
@@ -13,6 +14,7 @@ export class CategoriesComponent implements OnInit {
   public categories: Category[];
 
   constructor(private categoriesService: CategoriesService,
+              private httpService: HttpService,
               private router: Router,
               private activatedRoute: ActivatedRoute) { }
 
@@ -24,9 +26,17 @@ export class CategoriesComponent implements OnInit {
    * 获取所有的分类
    */
   getCategories() {
-    this.categoriesService.getAllCategory().subscribe(response => {
-      this.categories = response["data"];
-    });
+    this.httpService.doGet(
+      "category",
+      "categories",
+    ).subscribe(
+      response => {
+        this.categories = response;
+      },
+      error => {
+        console.error(error);
+      }
+    );
   }
 
 }

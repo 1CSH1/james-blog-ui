@@ -3,6 +3,7 @@ import {Article} from "../../../model/Article";
 import {Page} from "../../../model/Page";
 import {TagService} from "./tag.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import {HttpService} from "../../common/http/http.service";
 
 @Component({
   selector: 'tag',
@@ -12,17 +13,17 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class TagComponent implements OnInit {
 
   /**
-   * 当前分类类型
+   * 当前标签类型
    */
   public tag: string;
   /**
-   * 该分类下的文章
+   * 该标签下的文章
    */
   public articles: Article[];
   // 分页对象
   public page: Page = new Page();
 
-  constructor(private tagService: TagService,
+  constructor(private httpService: HttpService,
               private router: Router,
               private activatedRoute: ActivatedRoute) {
 
@@ -45,10 +46,16 @@ console.log(this.page.pageNo);
   }
 
   getArticles() {
-    // 获取某分类某一页的文章
-    this.tagService.getArticles(this.tag, this.page.pageSize, this.page.pageNo).subscribe(
+    this.httpService.doGet(
+      "article",
+      "/articles/tag",
+      {
+        "tagName": this.tag,
+        "pageNo": this.page.pageNo,
+        "pageSize": this.page.pageSize
+      }).subscribe(
       response => {
-        this.articles = response['data'];
+        this.articles = response['articles'];
         this.page.pageSize = response['pageSize'];
         this.page.pageNo = response['pageNo'];
         this.page.isFirst = response['isFirst'];
@@ -63,7 +70,8 @@ console.log(this.page.pageNo);
       error => {
         console.log(error);
       }
-    );
+    )
+
   }
 
 }

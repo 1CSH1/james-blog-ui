@@ -13,7 +13,7 @@ export const articleRoutes: Routes = [
     component: HomeComponent
   },
   {
-    path: ":year/:month/:day/:title",
+    path: ":year/:month/:day/:id/:title",
     component: DetailComponent
   },
   {

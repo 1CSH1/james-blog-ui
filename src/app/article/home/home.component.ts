@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {Article} from "../../model/Article";
 import {Page} from "../../model/Page";
 import {HomeService} from "./home.service";
+import {HttpService} from "../common/http/http.service";
 
 @Component({
   selector: 'home',
@@ -17,7 +18,7 @@ export class HomeComponent implements OnInit {
   public page: Page = new Page();
 
   constructor(
-    private homeService: HomeService,
+    private httpService: HttpService,
     private router: Router,
     private activatedRoute: ActivatedRoute
   ){
@@ -39,24 +40,27 @@ console.log(params);
   }
 
   getArticles() {
-    // 获取某一页的文章
-    this.homeService.getArticles(this.page.pageSize, this.page.pageNo).subscribe(
-      response => {
-        this.articles = response['data'];
-        this.page.pageSize = response['pageSize'];
-        this.page.pageNo = response['pageNo'];
-        this.page.isFirst = response['isFirst'];
-        this.page.isLast = response['isLast'];
+    this.httpService.doGet("article", "articles",
+      {
+        "pageNo": this.page.pageNo,
+        "pageSize": this.page.pageSize
+      }).subscribe(
+        response => {
+          this.articles = response['articles'];
+          this.page.pageSize = response['pageSize'];
+          this.page.pageNo = response['pageNo'];
+          this.page.isFirst = response['isFirst'];
+          this.page.isLast = response['isLast'];
 
 console.log("articles: " + this.articles);
 console.log("pageSize: " + this.page.pageSize);
 console.log("pageNo: " + this.page.pageNo);
 console.log("isFirst: " + this.page.isFirst);
 console.log("isLast: " + this.page.isLast);
-      },
-      error => {
-console.log(error);
-      }
-    );
+        },
+        error => {
+          console.log(error);
+        }
+    )
   }
 }

@@ -4,8 +4,8 @@
       <span class="media-object"></span>
     </div>
     <div class="media-body">
-      <h4 class="media-heading">{{ comment.username }}
-        <small class="pull-right">{{ comment.time }}&nbsp;|&nbsp;<a href="{{url}}" (click)="reply(comment)" >{{ 'comment.reply' | translate }}</a></small>
+      <h4 class="media-heading">{{ comment.name }}
+        <small class="pull-right">{{ comment.createdTime | date: 'yyyy-MM-dd HH:mm:ss' }}&nbsp;|&nbsp;<a href="{{url}}" (click)="reply(comment)" >{{ 'comment.reply' | translate }}</a></small>
       </h4>
        {{ comment.content }}
       <hr>

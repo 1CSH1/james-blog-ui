@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Tag} from "../../model/Tag";
 import {TagsService} from "./tags.service";
 import {Router, ActivatedRoute} from "@angular/router";
+import {HttpService} from "../common/http/http.service";
 
 @Component({
   selector: 'tags',
@@ -12,7 +13,7 @@ export class TagsComponent implements OnInit {
 
   public tags: Tag[];
 
-  constructor(private tagsService: TagsService,
+  constructor(private httpService: HttpService,
               private router: Router,
               private activatedRoute: ActivatedRoute) { }
 
@@ -24,9 +25,21 @@ export class TagsComponent implements OnInit {
    * 获取所有标签
    */
   getTags() {
-    this.tagsService.getAllTag().subscribe(response => {
-      this.tags = response["data"];
-    });
+    this.httpService.doGet(
+      "tag",
+      "tags",
+    ).subscribe(
+      response => {
+        this.tags = response;
+        this.setFontAndSize();
+      },
+      error => {
+        console.error(error);
+      }
+    );
   }
 
+  private setFontAndSize() {
+
+  }
 }

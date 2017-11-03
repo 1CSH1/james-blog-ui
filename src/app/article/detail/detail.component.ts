@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {Article} from "../../model/Article";
 import {DetailService} from "./detail.service";
+import {HttpService} from "../common/http/http.service";
 
 @Component({
   selector: 'detail',
@@ -12,7 +13,7 @@ export class DetailComponent implements OnInit {
 
   public articleDetail: Article = new Article();
 
-  constructor(private detailService: DetailService,
+  constructor(private httpService: HttpService,
               private router: Router,
               private activatedRoute: ActivatedRoute) {
   }
@@ -21,26 +22,33 @@ export class DetailComponent implements OnInit {
     this.activatedRoute.params.subscribe(
       params => {
 console.log(params);
-        let year = params["year"];
-        let month = params["month"];
-        let day = params["day"];
-        let title = params["title"];
-        let date = new Date(year, month - 1, day);
-        this.getArticle(date, title);
-console.log("日期" + date);
-console.log("title: " + title);
-    })
+        // let year = params["year"];
+        // let month = params["month"];
+        // let day = params["day"];
+        let id = params["id"];
+        // let subtitle = params["subtitle"];
+        // let date = new Date(year, month - 1, day);
+        this.getArticle(id);
+// console.log("日期" + date);
+// console.log("subtitle: " + subtitle);
+    });
   }
 
-  getArticle(date: Date, title: string) {
-    this.detailService.getArticle(date, title).subscribe(
+  getArticle(id: number) {
+    this.httpService.doGet(
+      "article",
+      "article/" + id
+    ).subscribe(
       response => {
-console.log(response["data"]);
-        this.articleDetail = response["data"];
-console.log(this.articleDetail);
+        this.articleDetail = response["article"];
+        this.articleDetail.tags = response["tags"];
+        this.articleDetail.categories = response["categories"];
+        this.articleDetail.comments = response["comments"];
       },
-      error => console.error(error)
-    )
+      error => {
+        console.error(error);
+      }
+    );
   }
 
 }

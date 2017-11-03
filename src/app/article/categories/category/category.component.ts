@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {Article} from "../../../model/Article";
 import {Page} from "../../../model/Page";
 import {CategoryService} from "./category.service";
+import {HttpService} from "../../common/http/http.service";
 
 @Component({
   selector: 'category',
@@ -23,6 +24,7 @@ export class CategoryComponent implements OnInit {
   public page: Page = new Page();
 
   constructor(private categoryService: CategoryService,
+              private httpService: HttpService,
               private router: Router,
               private activatedRoute: ActivatedRoute) {
 
@@ -45,10 +47,16 @@ console.log(this.page.pageNo);
   }
 
   getArticles() {
-    // 获取某分类某一页的文章
-    this.categoryService.getArticles(this.category, this.page.pageSize, this.page.pageNo).subscribe(
+    this.httpService.doGet(
+      "article",
+      "/articles/category",
+      {
+        "categoryName": this.category,
+        "pageNo": this.page.pageNo,
+        "pageSize": this.page.pageSize
+      }).subscribe(
       response => {
-        this.articles = response['data'];
+        this.articles = response['articles'];
         this.page.pageSize = response['pageSize'];
         this.page.pageNo = response['pageNo'];
         this.page.isFirst = response['isFirst'];
@@ -63,6 +71,6 @@ console.log("isLast: " + this.page.isLast);
       error => {
         console.log(error);
       }
-    );
+    )
   }
 }

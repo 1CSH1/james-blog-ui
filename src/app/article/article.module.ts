@@ -12,6 +12,7 @@ import {CommentComponent} from "./comment/comment.component";
 import {CommentService} from "./comment/comment.service";
 import {CommentViewComponent} from "./comment/view/comment-view.component";
 import {ReactiveFormsModule} from "@angular/forms";
+import {HttpService} from "./common/http/http.service";
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import {ReactiveFormsModule} from "@angular/forms";
   providers: [
     HomeService,
     DetailService,
-    CommentService
+    CommentService,
+    HttpService
   ]
 })
 export class ArticleModule { }

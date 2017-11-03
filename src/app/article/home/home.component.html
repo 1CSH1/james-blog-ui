@@ -17,8 +17,7 @@
   <div class="row">
     <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
       <div *ngFor="let article of articles" class="post-preview">
-        <!--<a [routerLink]="['/detail', article.id , '']">-->
-        <a [routerLink]="['/2017/07/20/', article.title]">
+        <a [routerLink]="['/', article.createdTime | date: 'yyyy' , article.createdTime | date: 'MM', article.createdTime | date: 'dd', article.id, article.subtitle]">
           <h2 class="post-title">
             {{ article.title }}
           </h2>
@@ -27,9 +26,9 @@
           </h3>
         </a>
         <p class="post-meta">
-          {{ 'home.postedOn' | translate }}&nbsp;{{ article.time }}&nbsp;|&nbsp;
-          {{ 'home.readTimes' | translate }}:&nbsp;{{ article.readTimes }}&nbsp;|&nbsp;
-          {{ 'home.commentTimes' | translate}}:&nbsp;{{ article.commentTimes }}
+          {{ 'home.postedOn' | translate }}&nbsp;{{ article.createdTime | date: 'yyyy-MM-dd HH:mm:ss' }}&nbsp;|&nbsp;
+          {{ 'home.readTimes' | translate }}:&nbsp;{{ article.readNumber }}&nbsp;|&nbsp;
+          {{ 'home.commentTimes' | translate}}:&nbsp;{{ article.readNumber }}
           <span *ngIf="article.isTop">&nbsp;|&nbsp;{{ 'home.isTop' | translate }}</span>
         </p>
         <hr>

@@ -1,8 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Comment} from "../../model/Comment";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {CommentService} from "./comment.service";
 import {Router} from "@angular/router";
+import {HttpService} from "../common/http/http.service";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'comment',
@@ -26,7 +27,8 @@ export class CommentComponent implements OnInit {
   public comment: Comment = new Comment();
 
   constructor(private formBuilder: FormBuilder,
-              private commentService: CommentService,
+              private toastr: ToastrService,
+              private httpService: HttpService,
               private router: Router){
 
   }
@@ -38,23 +40,61 @@ export class CommentComponent implements OnInit {
   getReplyComment(event) {
     this.replyComment = event;
     this.pid = this.replyComment.id;
-    this.content = "[reply]" + this.replyComment.username + "[reply]\n";
-     this.commentForm.value.content = this.content;
+    this.content = "[reply]" + this.replyComment.name + "[reply]\n";
+    this.commentForm.value.content = this.content;
+    this.toastr.info("评论成功", "提示");
+    console.log("asdfadsf");
   }
 
   sendComment() {
     if (this.commentForm.valid) {
       this.comment = this.commentForm.value;
 console.log(this.pid + " --- " + this.comment.nickname + " --- " + this.comment.email + " --- " + this.comment.content);
-      this.commentService.sendComment(this.comment)
-        .subscribe(
-          data => {
-            this.router.navigateByUrl(this.router.url);
-          },
-          error => {
-            this.formErrors.formError = error.message;
-          }
-        )
+      if (this.comment.content.indexOf("[reply]") == -1) {
+        // 删除了 [reply] 则设置父评论为空
+        this.pid = 0;
+      } else {
+        let contentTemp = this.comment.content;
+        contentTemp = contentTemp.substring(contentTemp.lastIndexOf("[reply]") + 7);
+        console.log(contentTemp);
+        this.comment.content = contentTemp;
+      }
+console.log(this.pid + " --- " + this.comment.nickname + " --- " + this.comment.email + " --- " + this.comment.content);
+
+      // 截取 URL 获取文章 ID
+      let articleId = this.router.url;
+      articleId = articleId.substring(0, articleId.lastIndexOf('/'));
+      articleId = articleId.substring(articleId.lastIndexOf('/') + 1);
+      console.log(articleId);
+
+      this.httpService.doGet(
+        "comment",
+        "article/" + articleId + "/add",
+        {
+          "pid": this.pid,
+          "name": this.comment.nickname,
+          "email": this.comment.email,
+          "content": this.comment.content
+        }
+      ).subscribe(
+        response => {
+          this.toastr.info("评论成功", "提示");
+          window.location.reload();
+        },
+        error => {
+          this.formErrors.formError = error.message;
+        }
+      )
+
+      // this.commentService.sendComment(this.comment)
+      //   .subscribe(
+      //     data => {
+      //       this.router.navigateByUrl(this.router.url);
+      //     },
+      //     error => {
+      //       this.formErrors.formError = error.message;
+      //     }
+      //   )
     } else {
       this.formErrors.formError = "存在不合法的输入项，请检查。";
     }
