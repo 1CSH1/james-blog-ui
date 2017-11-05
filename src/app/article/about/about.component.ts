@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {About} from "../../model/About";
-import {AboutService} from "./about.service";
+import {HttpService} from "../../common/service/http/http.service";
 
 @Component({
   selector: 'about',
@@ -11,16 +11,21 @@ export class AboutComponent implements OnInit {
 
   public about: About = new About();
 
-  constructor(private aboutService: AboutService) { }
+  constructor(private httpService: HttpService) { }
 
   ngOnInit() {
     this.getAbout();
   }
 
   getAbout() {
-    this.aboutService.getAbout().subscribe(response => {
-      this.about = response["data"];
-    });
+    this.httpService.doGet(
+      "about",
+      "about/use"
+    ).subscribe(
+      response => {
+        this.about = response;
+      }
+    )
   }
 
 }

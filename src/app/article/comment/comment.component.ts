@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Comment} from "../../model/Comment";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
-import {HttpService} from "../common/http/http.service";
+import {HttpService} from "../../common/service/http/http.service";
 import {ToastrService} from "ngx-toastr";
 
 @Component({

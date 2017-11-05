@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {AboutComponent} from "./about.component";
-import {AboutService} from "./about.service";
 import {SharedModule} from "../../shared/shared.module";
 import {RouterModule} from "@angular/router";
 import {aboutRoutes} from "./about.routes";
@@ -17,7 +16,6 @@ import {aboutRoutes} from "./about.routes";
     AboutComponent
   ],
   providers: [
-    AboutService
   ]
 })
 export class AboutModule { }

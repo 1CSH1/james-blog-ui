@@ -2,8 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {Article} from "../../model/Article";
 import {Page} from "../../model/Page";
-import {HomeService} from "./home.service";
-import {HttpService} from "../common/http/http.service";
+import {HttpService} from "../../common/service/http/http.service";
 
 @Component({
   selector: 'home',

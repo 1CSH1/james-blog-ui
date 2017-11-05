@@ -1,5 +1,5 @@
 <!-- Page Header -->
-<header class="masthead" style="background-image: url('../../../assets/clean-blog/img/home-bg.jpg')">
+<header class="masthead" style="background-image: url('../../../assets/clean-blog/img/post-bg.jpg')">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
@@ -18,7 +18,12 @@
     <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
       <div *ngIf="tags != null" class="title"> {{ 'tags.title.prefix' | translate }} {{ tags.length }} {{'tags.title.suffix' | translate}}</div>
       <span *ngFor="let tag of tags">
-        <a [routerLink]="['/tags/',tag.name, 1]" [ngStyle]="{'font-size': tag.font, 'color': tag.color }">{{ tag.name }}</a>
+        <span *ngIf="tag.total > 0">
+          <a [routerLink]="['/tags/',tag.name, 1]" [ngStyle]="{'font-size': tag.font, 'color': tag.color }">{{ tag.name }}</a>
+        </span>
+        <span *ngIf="tag.total == 0">
+          <span [ngStyle]="{'font-size': tag.font, 'color': tag.color }">{{ tag.name }}</span>
+        </span>
       </span>
     </div>
   </div>

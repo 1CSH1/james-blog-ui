@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Article} from "../../../model/Article";
 import {Page} from "../../../model/Page";
-import {TagService} from "./tag.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {HttpService} from "../../common/http/http.service";
+import {HttpService} from "../../../common/service/http/http.service";
 
 @Component({
   selector: 'tag',

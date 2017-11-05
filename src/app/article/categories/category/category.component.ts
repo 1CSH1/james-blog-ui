@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {Article} from "../../../model/Article";
 import {Page} from "../../../model/Page";
-import {CategoryService} from "./category.service";
-import {HttpService} from "../../common/http/http.service";
+import {HttpService} from "../../../common/service/http/http.service";
 
 @Component({
   selector: 'category',
@@ -23,8 +22,7 @@ export class CategoryComponent implements OnInit {
   // 分页对象
   public page: Page = new Page();
 
-  constructor(private categoryService: CategoryService,
-              private httpService: HttpService,
+  constructor(private httpService: HttpService,
               private router: Router,
               private activatedRoute: ActivatedRoute) {
 

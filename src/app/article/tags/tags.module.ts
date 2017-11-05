@@ -5,8 +5,6 @@ import { TagComponent } from './tag/tag.component';
 import {SharedModule} from "../../shared/shared.module";
 import {Route, RouterModule} from "@angular/router";
 import {tagsRoutes} from "./tags.routes";
-import {TagsService} from "./tags.service";
-import {TagService} from "./tag/tag.service";
 
 @NgModule({
   imports: [
@@ -19,8 +17,6 @@ import {TagService} from "./tag/tag.service";
     TagComponent
   ],
   providers: [
-    TagsService,
-    TagService
   ]
 })
 export class TagsModule { }

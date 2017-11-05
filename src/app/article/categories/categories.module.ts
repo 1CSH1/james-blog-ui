@@ -8,8 +8,6 @@ import { CategoryComponent } from './category/category.component';
 import {categoriesRoutes} from "./categories.routes";
 import {SharedModule} from "../../shared/shared.module";
 import {CategoriesComponent} from "./categories.component";
-import {CategoriesService} from "./categories.service";
-import {CategoryService} from "./category/category.service";
 
 
 @NgModule({
@@ -24,8 +22,6 @@ import {CategoryService} from "./category/category.service";
     CategoryComponent
   ],
   providers: [
-    CategoriesService,
-    CategoryService
   ]
 })
 export class CategoriesModule { }
