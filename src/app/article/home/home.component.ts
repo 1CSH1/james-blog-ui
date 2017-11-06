@@ -39,7 +39,9 @@ console.log(params);
   }
 
   getArticles() {
-    this.httpService.doGet("article", "articles",
+    this.httpService.doPost(
+      "article",
+      "articles",
       {
         "pageNo": this.page.pageNo,
         "pageSize": this.page.pageSize

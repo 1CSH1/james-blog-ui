@@ -67,7 +67,7 @@ console.log(this.pid + " --- " + this.comment.nickname + " --- " + this.comment.
       articleId = articleId.substring(articleId.lastIndexOf('/') + 1);
       console.log(articleId);
 
-      this.httpService.doGet(
+      this.httpService.doPut(
         "comment",
         "article/" + articleId + "/add",
         {
@@ -86,15 +86,6 @@ console.log(this.pid + " --- " + this.comment.nickname + " --- " + this.comment.
         }
       )
 
-      // this.commentService.sendComment(this.comment)
-      //   .subscribe(
-      //     data => {
-      //       this.router.navigateByUrl(this.router.url);
-      //     },
-      //     error => {
-      //       this.formErrors.formError = error.message;
-      //     }
-      //   )
     } else {
       this.formErrors.formError = "存在不合法的输入项，请检查。";
     }

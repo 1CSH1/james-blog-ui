@@ -23,7 +23,7 @@ export class HttpService {
    */
   public doGet(serviceName: string, path: string, params?: any, headers?: any): Observable<any> {
     let theHeaders: Headers = new Headers();
-    // theHeaders.append("Content-Type", "application/json; charset=utf-8");
+    theHeaders.append("Content-Type", "application/json; charset=utf-8");
     for (let header in headers) {
       theHeaders.append(header, headers[header]);
     }
@@ -48,17 +48,32 @@ export class HttpService {
    */
   public doPost(serviceName: string, path: string, params?: any, headers?: any): Observable<any> {
     let theHeaders: Headers = new Headers();
-    theHeaders.append("Content-Type", "application/json");
+    theHeaders.append("Content-Type", "application/json; charset=utf-8");
     for (let header in headers) {
       theHeaders.append(header, headers[header]);
     }
     let url = this.baseUrl + "/" + serviceName + "/" + path ;
     return this.http
-      .post(url, params, {headers: theHeaders})
+      .post(url, JSON.stringify(params), {headers: theHeaders})
       .map(response => response.json())
       .catch((error: any) => Observable.throw(error || "Server error"));
 
   }
+
+  public doPut(serviceName: string, path: string, params?: any, headers?: any): Observable<any> {
+    let theHeaders: Headers = new Headers();
+    theHeaders.append("Content-Type", "application/json; charset=utf-8");
+    for (let header in headers) {
+      theHeaders.append(header, headers[header]);
+    }
+    let url = this.baseUrl + "/" + serviceName + "/" + path ;
+    return this.http
+      .put(url, JSON.stringify(params), {headers: theHeaders})
+      .map(response => response.json())
+      .catch((error: any) => Observable.throw(error || "Server error"));
+
+  }
+
 
   /**
    * Get 方法解析参数
